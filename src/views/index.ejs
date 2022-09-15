@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head', { title }) %> 
+
+<body class="container mt-3">
+
+    <header>
+        <%- include('./partials/navbar') %> 
+
+        <h1> <%= title %>  </h1>
+        <hr>
+    </header>
+
+    <main>
+
+        <section class="row">
+
+            <% heroesJSON.forEach(hero => { %>
+                <div class="col-12 col-sm-6 col-lg-3 my-2 p-1">
+                    <img src="/assets/<%- hero.slug %>.jpg" alt="<%- hero.superhero %> image" width="250">
+
+                    <div class="card-body p-2">
+                        <h4> <%= hero.superhero %>  </h4>
+                        <a class="btn btn-outline-success w-100" href="/hero-detail/<%- hero.slug %>"> Details</a>
+
+                    </div>
+                </div>
+                
+                <% }) %>
+        </section>
+
+    </main>
+    
+</body>
+</html>

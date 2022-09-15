@@ -1,0 +1,201 @@
+[{
+    "id": 1,
+    "slug": "dc-batman",
+    "superhero": "Batman",
+    "publisher_id": 1,
+    "alter_ego": "Bruce Wayne",
+    "first_appearance": "Detective Comics #27",
+    "characters": "Bruce Wayne"
+
+},
+{
+    "id": 2,
+    "slug": "dc-superman",
+    "superhero": "Superman",
+    "publisher_id": 1,
+    "alter_ego": "Kal-El",
+    "first_appearance": "Action Comics #1",
+    "characters": "Kal-El"
+
+},
+{
+    "id": 3,
+    "slug": "dc-flash",
+    "superhero": "Flash",
+    "publisher_id": 1,
+    "alter_ego": "Jay Garrick",
+    "first_appearance": "Flash Comics #1",
+    "characters": "Jay Garrick, Barry Allen, Wally West, Bart Allen"
+
+},
+{
+    "id": 4,
+    "slug": "dc-green",
+    "superhero": "Green Lantern",
+    "publisher_id": 1,
+    "alter_ego": "Alan Scott",
+    "first_appearance": "All-American Comics #16",
+    "characters": "Alan Scott, Hal Jordan, Guy Gardner, John Stewart, Kyle Raynor, Jade, Sinestro, Simon Baz"
+
+},
+{
+    "id": 5,
+    "slug": "dc-arrow",
+    "superhero": "Green Arrow",
+    "publisher_id": 1,
+    "alter_ego": "Oliver Queen",
+    "first_appearance": "More Fun Comics #73",
+    "characters": "Oliver Queen"
+
+},
+{
+    "id": 6,
+    "slug": "dc-wonder",
+    "superhero": "Wonder Woman",
+    "publisher_id": 1,
+    "alter_ego": "Princess Diana",
+    "first_appearance": "All Star Comics #8",
+    "characters": "Princess Diana"
+
+},
+{
+    "id": 7,
+    "slug": "dc-martian",
+    "superhero": "Martian Manhunter",
+    "publisher_id": 1,
+    "alter_ego": "J'onn J'onzz",
+    "first_appearance": "Detective Comics #225",
+    "characters": "Martian Manhunter"
+
+},
+{
+    "id": 8,
+    "slug": "dc-robin",
+    "superhero": "Robin/Nightwing",
+    "publisher_id": 1,
+    "alter_ego": "Dick Grayson",
+    "first_appearance": "Detective Comics #38",
+    "characters": "Dick Grayson"
+
+},
+{
+    "id": 9,
+    "slug": "dc-blue",
+    "superhero": "Blue Beetle",
+    "publisher_id": 1,
+    "alter_ego": "Dan Garret",
+    "first_appearance": "Mystery Men Comics #1",
+    "characters": "Dan Garret, Ted Kord, Jaime Reyes"
+
+},
+{
+    "id": 10,
+    "slug": "dc-black",
+    "superhero": "Black Canary",
+    "publisher_id": 1,
+    "alter_ego": "Dinah Drake",
+    "first_appearance": "Flash Comics #86",
+    "characters": "Dinah Drake, Dinah Lance"
+
+},
+{
+    "id": 11,
+    "slug": "marvel-spider",
+    "superhero": "Spider Man",
+    "publisher_id": 2,
+    "alter_ego": "Peter Parker",
+    "first_appearance": "Amazing Fantasy #15",
+    "characters": "Peter Parker"
+
+},
+{
+    "id": 12,
+    "slug": "marvel-captain",
+    "superhero": "Captain America",
+    "publisher_id": 2,
+    "alter_ego": "Steve Rogers",
+    "first_appearance": "Captain America Comics #1",
+    "characters": "Steve Rogers"
+
+},
+{
+    "id": 13,
+    "slug": "marvel-iron",
+    "superhero": "Iron Man",
+    "publisher_id": 2,
+    "alter_ego": "Tony Stark",
+    "first_appearance": "Tales of Suspense #39",
+    "characters": "Tony Stark"
+
+},
+{
+    "id": 14,
+    "slug": "marvel-thor",
+    "superhero": "Thor",
+    "publisher_id": 2,
+    "alter_ego": "Thor Odinson",
+    "first_appearance": "Journey into Myster #83",
+    "characters": "Thor Odinson"
+
+},
+{
+    "id": 15,
+    "slug": "marvel-hulk",
+    "superhero": "Hulk",
+    "publisher_id": 2,
+    "alter_ego": "Bruce Banner",
+    "first_appearance": "The Incredible Hulk #1",
+    "characters": "Bruce Banner"
+
+},
+{
+    "id": 16,
+    "slug": "marvel-wolverine",
+    "superhero": "Wolverine",
+    "publisher_id": 2,
+    "alter_ego": "James 'logan' Howlett",
+    "first_appearance": "The Incredible Hulk #180",
+    "characters": "James Howlett"
+
+},
+{
+    "id": 17,
+    "slug": "marvel-daredevil",
+    "superhero": "Daredevil",
+    "publisher_id": 2,
+    "alter_ego": "Matthew Michael Murdock",
+    "first_appearance": "Daredevil #1",
+    "characters": "Matthew Michael Murdock"
+
+},
+{
+    "id": 18,
+    "slug": "marvel-hawkeye",
+    "superhero": "Hawkeye",
+    "publisher_id": 2,
+    "alter_ego": "Clinton Francis Barton",
+    "first_appearance": "Tales of Suspense #57",
+    "characters": "Clinton Francis Barton"
+
+},
+{
+    "id": 19,
+    "slug": "marvel-cyclops",
+    "superhero": "Cyclops",
+    "publisher_id": 2,
+    "alter_ego": "Scott Summers",
+    "first_appearance": "X-Men #1",
+    "characters": "Scott Summers"
+
+},
+{
+    "id": 20,
+    "slug": "marvel-silver",
+    "superhero": "Silver Surfer",
+    "publisher_id": 2,
+    "alter_ego": "Norrin Radd",
+    "first_appearance": "The Fantastic Four #48",
+    "characters": "Norrin Radd"
+
+}
+]

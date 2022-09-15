@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head', { title }) %> 
+
+<body class="container mt-3">
+
+    <header>
+        <%- include('../partials/navbar') %> 
+
+        <h1> <%= title %>  </h1>
+        <hr>
+    </header>
+
+    <main class="my-5">
+        <form action="/hero/create" method="post">
+            <div class="mb-3">
+
+                <label class="form-label" for="">SuperHero Name</label>
+                <input class="form-control" type="text" name="superhero">
+            </div>
+            <div class="mb-3">
+
+                <label class="form-label" for="">Alter Ego</label>
+                <input class="form-control" type="text" name="alter_ego">
+            </div>
+            <div class="mb-3">
+
+                <label class="form-label" for="">Character</label>
+                <input class="form-control" type="text" name="character">
+            </div>
+            <div class="mb-3">
+
+                <label class="form-label" for="">Slug</label>
+                <input class="form-control" type="text" name="slug">
+            </div>
+            <div class="mb-3">
+
+                <label class="form-label" for="">First Appearance</label>
+                <input class="form-control" type="text" name="first_appearance">
+            </div>
+
+            <div class="mb-3">
+                <select class="form-select" name="publisher" id="">
+                    <option value="1">DC Comics</option>
+                    <option value="2">Marvel Comics</option>
+                </select>
+            </div>
+
+            <button class="btn btn-info w-100" type="submit">Create Hero</button>
+
+        </form>
+    </main>
+
+
+</body>
+</html>
