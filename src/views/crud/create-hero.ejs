@@ -13,35 +13,39 @@
     </header>
 
     <main class="my-5">
-        <form action="/hero/create" method="post">
-            <div class="mb-3">
+        <div class="alert alert-danger" hidden id="errorsDiv">
 
+        </div>
+        <form action="/hero/create" method="post" id="createHeroForm">
+
+            <div class="mb-3">
                 <label class="form-label" for="">SuperHero Name</label>
-                <input class="form-control" type="text" name="superhero">
+                <input class="form-control" type="text" name="superhero" data-label="SuperHero Name"/>
             </div>
             <div class="mb-3">
 
                 <label class="form-label" for="">Alter Ego</label>
-                <input class="form-control" type="text" name="alter_ego">
+                <input class="form-control" type="text" data-label="Alter Ego" name="alter_ego">
             </div>
             <div class="mb-3">
 
                 <label class="form-label" for="">Character</label>
-                <input class="form-control" type="text" name="character">
+                <input class="form-control" type="text" data-label="Character" name="character">
             </div>
             <div class="mb-3">
 
                 <label class="form-label" for="">Slug</label>
-                <input class="form-control" type="text" name="slug">
+                <input class="form-control" type="text" data-label="Slug" name="slug">
             </div>
             <div class="mb-3">
 
                 <label class="form-label" for="">First Appearance</label>
-                <input class="form-control" type="text" name="first_appearance">
+                <input class="form-control" type="text" data-label="First Appearance" name="first_appearance">
             </div>
 
             <div class="mb-3">
-                <select class="form-select" name="publisher" id="">
+                <select class="form-select" data-label="Publisher" name="publisher" id="">
+                    <option value="" selected disabled>Publisher</option>
                     <option value="1">DC Comics</option>
                     <option value="2">Marvel Comics</option>
                 </select>
@@ -52,6 +56,6 @@
         </form>
     </main>
 
-
+<script src="/javascripts/createFormValidator.js"></script>
 </body>
 </html>
