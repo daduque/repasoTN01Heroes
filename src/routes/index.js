@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const heroesRouter = require('./heroes');
+const apiRouter = require('./api/apiRouter');
 
 /* GET home page. */
 // router.get('/', function(req, res, next) {
@@ -8,6 +9,7 @@ const heroesRouter = require('./heroes');
 
 
 router.use('/', heroesRouter);
+router.use('/api', apiRouter);
 
 
 module.exports = router;
