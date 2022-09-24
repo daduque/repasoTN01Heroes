@@ -14,10 +14,10 @@ module.exports = {
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "9kEW9I5gjK",
+    "password": "9SW0RCJnTz",
+    "database": "9kEW9I5gjK",
+    "host": "remotemysql.com",
     "dialect": "mysql"
   }
 }
