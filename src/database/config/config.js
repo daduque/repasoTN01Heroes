@@ -1,9 +1,9 @@
 module.exports = {
   "development": {
-    "username": "root",
-    "password": "root",
-    "database": "heroes-app-db",
-    "host": "127.0.0.1",
+    "username": "9kEW9I5gjK",
+    "password": "9SW0RCJnTz",
+    "database": "9kEW9I5gjK",
+    "host": "remotemysql.com",
     "dialect": "mysql"
   },
   "test": {
