@@ -14,14 +14,35 @@ const ApiHeroController = {
                 association: 'publisher',
                 
             }});
+
+            ///api/hero-detail/slug
+
+            // const totalHeroes = await db.Hero.count();
+            const totalHeroes = herosFromDB.length;
+            // let totalMarvel = 0;
+            // let totalDC = 0;
+
+            // herosFromDB.forEach(hero => {
+            //     hero.publisher_id === 1 ? totalDC++ : totalMarvel++;
+            // });
+
+            const heroesWithDetail = herosFromDB.map(hero => {
+                return {
+                    id: hero.id,
+                    slug: hero.slug,
+                    name: hero.superhero,
+                    detail: `http://localhost:3000/api/hero-detail/${hero.slug}`,
+                }
+            })
+
             if(herosFromDB){
                 shuffle(herosFromDB);
-                // res.render('index', { heroesJSON: herosFromDB, title : 'Heroes App' });
                 res.status(200).json({
-                    'data': herosFromDB,
+                    'count': totalHeroes,
+                    'data': heroesWithDetail,
                     'status': 200,
                     'msg': 'OK',
-                    'enpoint': '/api/heroes'
+                    'enpoint': '/api/heroes',
                 });
             }else{
                 // res.render('error', { title: 'Error', msg: 'No hay datos para mostrar' });
