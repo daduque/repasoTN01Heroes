@@ -15,23 +15,13 @@ const ApiHeroController = {
                 
             }});
 
-            ///api/hero-detail/slug
-
-            // const totalHeroes = await db.Hero.count();
             const totalHeroes = herosFromDB.length;
-            // let totalMarvel = 0;
-            // let totalDC = 0;
-
-            // herosFromDB.forEach(hero => {
-            //     hero.publisher_id === 1 ? totalDC++ : totalMarvel++;
-            // });
-
             const heroesWithDetail = herosFromDB.map(hero => {
                 return {
                     id: hero.id,
                     slug: hero.slug,
                     name: hero.superhero,
-                    detail: `http://localhost:3000/api/hero-detail/${hero.slug}`,
+                    detail: `https://dh-heroes-app.herokuapp.com/api/hero-detail/${hero.slug}`,
                 }
             })
 
@@ -69,13 +59,19 @@ const ApiHeroController = {
     
             if(hero){
                 console.log(hero);
-                res.render('hero-details', { hero, title: 'Hero Details' });
+                res.status(200).json({
+                    data: hero,
+                    status: 200,
+                    msg: 'OK',
+                })
             }else{
-                res.render('error', { title: 'Error', msg: 'No hay datos para mostrar' });
+                res.status(404).json({'msg': 'No hay datos para mostrar'});
+                // res.render('error', { title: 'Error', msg: 'No hay datos para mostrar' });
             }
         } catch (error) {
-            console.log(error);
-            res.render('error', { title: 'Error', msg: '500 - Ha ocurrido un error interno' });
+            // console.log(error);
+            res.status(500).json({'msg': '500 - Ha ocurrido un error interno'});
+            // res.render('error', { title: 'Error', msg: '500 - Ha ocurrido un error interno' });
         }
 
     },
@@ -89,7 +85,15 @@ const ApiHeroController = {
 
                 if (heroes) {
                     shuffle(heroes);
-                    res.render('index', { heroesJSON : heroes, title: 'DC Comics Heroes' });
+                    res.status(200).json({
+                        count: heroes.length,
+                        data: heroes,
+                        'status': 200,
+                        'msg': 'OK',
+                        'enpoint': `/api/heroes/${publisher}`
+                    })
+                
+                    // res.render('index', { heroesJSON : heroes, title: 'DC Comics Heroes' });
                 } else {
                     res.render('error', { title: 'Error', msg: 'No hay datos para mostrar' });
                 }
@@ -106,19 +110,36 @@ const ApiHeroController = {
 
                 if (heroes) {
                     shuffle(heroes);
-                    res.render('index', { heroesJSON : heroes, title: 'Marvel Comics Heroes' });
+                    res.status(200).json({
+                        count: heroes.length,
+                        data: heroes,
+                        'status': 200,
+                        'msg': 'OK',
+                        'enpoint': `/api/heroes/${publisher}`
+                    })
                 } else {
-                    res.render('error', { title: 'Error', msg: 'No hay datos para mostrar' });
+                    res.status(404).json({
+                        'status': 404,
+                        'msg': 'No hay datos para mostrar'
+                    })
+
+                    // res.render('error', { title: 'Error', msg: 'No hay datos para mostrar' });
                 }
                 
             } catch (error) {
-                console.log(error);
-                res.render('error', { title: 'Error', msg: '500 - Ha ocurrido un error interno' });
+                // console.log(error);
+                res.status(500).json({'msg': '500 - Ha ocurrido un error interno'});
+                // res.render('error', { title: 'Error', msg: '500 - Ha ocurrido un error interno' });
             }
 
         }else{
-            res.render('error', { title: 'Error', msg: 'Ha realizado una búsqueda inválida' });
+            res.status(400).json({
+                'status': 400,
+                'msg': 'Ha realizado una búsqueda inválida'
+            })
         }
+            // res.render('error', { title: 'Error', msg: 'Ha realizado una búsqueda inválida' });
+    
 
     },
 
