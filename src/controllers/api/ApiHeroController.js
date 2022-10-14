@@ -29,7 +29,7 @@ const ApiHeroController = {
                 shuffle(herosFromDB);
                 res.status(200).json({
                     'count': totalHeroes,
-                    'data': heroesWithDetail,
+                    'data': herosFromDB,
                     'status': 200,
                     'msg': 'OK',
                     'enpoint': '/api/heroes',
