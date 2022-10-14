@@ -15,21 +15,21 @@ const ApiHeroController = {
                 
             }});
 
-            const totalHeroes = herosFromDB.length;
-            const heroesWithDetail = herosFromDB.map(hero => {
-                return {
-                    id: hero.id,
-                    slug: hero.slug,
-                    name: hero.superhero,
-                    detail: `https://dh-heroes-app.herokuapp.com/api/hero-detail/${hero.slug}`,
-                }
-            })
-
+            
             if(herosFromDB){
-                shuffle(herosFromDB);
+                const totalHeroes = herosFromDB.length;
+                const heroesWithDetail = herosFromDB.map(hero => {
+                    return {
+                        id: hero.id,
+                        slug: hero.slug,
+                        name: hero.superhero,
+                        detail: `https://dh-heroes-app.herokuapp.com/api/hero-detail/${hero.slug}`,
+                    }
+                })
+                shuffle(heroesWithDetail);
                 res.status(200).json({
                     'count': totalHeroes,
-                    'data': herosFromDB,
+                    'data': heroesWithDetail,
                     'status': 200,
                     'msg': 'OK',
                     'enpoint': '/api/heroes',
